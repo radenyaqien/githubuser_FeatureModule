@@ -8,7 +8,7 @@ data class DetailUserResponse(
     @Json(name = "avatar_url")
     val avatarUrl: String,
     @Json(name = "bio")
-    val bio: String,
+    val bio: String?,
     @Json(name = "blog")
     val blog: String,
     @Json(name = "company")
@@ -32,17 +32,17 @@ data class DetailUserResponse(
     @Json(name = "gravatar_id")
     val gravatarId: String,
     @Json(name = "hireable")
-    val hireable: String?,
+    val hireable: Boolean?,
     @Json(name = "html_url")
     val htmlUrl: String,
     @Json(name = "id")
     val id: Int,
     @Json(name = "location")
-    val location: String,
+    val location: String?,
     @Json(name = "login")
     val login: String,
     @Json(name = "name")
-    val name: String,
+    val name: String?,
     @Json(name = "node_id")
     val nodeId: String,
     @Json(name = "organizations_url")
@@ -62,7 +62,7 @@ data class DetailUserResponse(
     @Json(name = "subscriptions_url")
     val subscriptionsUrl: String,
     @Json(name = "twitter_username")
-    val twitterUsername: String,
+    val twitterUsername: String?,
     @Json(name = "type")
     val type: String,
     @Json(name = "updated_at")
@@ -75,10 +75,12 @@ data class DetailUserResponse(
 fun DetailUserResponse.asDetailUser() = DetailUser(
     id = id,
     username = login,
-    name = name,
+    name = name ?: "-",
     avatarUrl = avatarUrl,
-    bio = bio,
+    bio = bio ?: "-",
     email = email ?: "-",
     followers = followers,
-    following = following
+    following = following,
+    location = location ?: "-",
+    repos = publicRepos
 )

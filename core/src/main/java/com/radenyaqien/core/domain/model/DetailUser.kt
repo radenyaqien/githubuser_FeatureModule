@@ -9,4 +9,6 @@ data class DetailUser(
     val email: String,
     val followers: Int,
     val following: Int,
+    val repos: Int,
+    val location: String
 )

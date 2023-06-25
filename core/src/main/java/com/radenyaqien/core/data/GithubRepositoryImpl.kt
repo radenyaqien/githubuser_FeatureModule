@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.flowOn
 import org.json.JSONObject
 import retrofit2.HttpException
 
-class GithubRepository(private val apiService: GithubApiService) : Repository {
+class GithubRepositoryImpl(private val apiService: GithubApiService) : Repository {
     override suspend fun searchUser(query: String): Flow<Resource<List<GithubUser>>> {
         return safeApiCall {
             apiService.searchUser(query).items.map {

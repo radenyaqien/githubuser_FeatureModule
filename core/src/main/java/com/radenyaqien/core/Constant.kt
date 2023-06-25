@@ -1,3 +1,3 @@
 package com.radenyaqien.core
 
-const val BaseUrl = "https://api.github.com/"
+const val BASE_URL = "https://api.github.com/"
