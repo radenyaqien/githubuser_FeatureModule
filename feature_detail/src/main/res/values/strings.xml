@@ -1,0 +1,8 @@
+<resources>
+  
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="follower">Follower</string>
+    <string name="following">Following</string>
+    <string name="repositories">Repositories</string>
+    <string name="user_not_found">User Not Found</string>
+</resources>
