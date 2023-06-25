@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">GithubUser2023</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="avatar">avatar</string>
+    <string name="popular_user">Popular User</string>
+    <string name="title_feature_detail">Detail User</string>
+    <string name="installing_detail_module">Installing Detail Module</string>
+    <string name="install_failed">Install Failed</string>
+    <string name="install_cancelled">Install Cancelled</string>
 </resources>

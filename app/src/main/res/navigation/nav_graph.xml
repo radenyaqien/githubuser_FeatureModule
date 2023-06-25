@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:progressDestination="@+id/progressFragment"
+    app:startDestination="@id/list_user_route">
+
+    <fragment
+        android:id="@+id/list_user_route"
+        android:name="com.radenyaqien.githubuser2023.home.UsersFragment"
+        android:label="@string/popular_user"
+        tools:layout="@layout/fragment_users">
+
+    </fragment>
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.radenyaqien.githubuser2023.ProgressFragment"
+        android:label="ProgressFragment" />
+    <include-dynamic
+        android:id="@+id/detailGraph"
+        app:graphResName="detail_graph"
+        app:moduleName="feature_detail" />
+</navigation>
