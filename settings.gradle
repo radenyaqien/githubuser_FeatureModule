@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GithubUser2023"
 include ':app'
+include ':core'
+include ':feature_detail'
